@@ -48,7 +48,6 @@ a {
 }
 .ypg-aside .menu li {
   width: 100%;
-  height: 40px;
   border: 4px solid transparent;
   padding-left: 30px;
   box-sizing: border-box;
@@ -59,14 +58,20 @@ a {
 }
 .ypg-aside .menu li.active {
   background-color: #666;
-  border-left: 4px solid blue;
+  border-left: 4px solid #c28c2f;
 }
-.ypg-aside .menu li .hidden {
-  display: none;
+.ypg-aside .menu li .child a {
+  display: block !important;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 20px;
 }
 .ypg-section {
   width: 100%;
   padding-left: 180px;
+}
+.ypg-section.move {
+  padding-left: 0;
 }
 .ypg-section .ypg-nav {
   height: 50px;
@@ -85,37 +90,37 @@ a {
   padding-right: 20px;
   float: right;
 }
-.ypg-main {
+.ypg-section .ypg-main {
   padding-top: 30px;
 }
-.ypg-main ol {
+.ypg-section .ypg-main ol {
   width: 100%;
   border-radius: 5px;
   padding: 8px 15px;
   background-color: #ccc;
   overflow: hidden;
 }
-.ypg-main ol li {
+.ypg-section .ypg-main ol li {
   float: left;
 }
-.ypg-main ol li:first-child a {
+.ypg-section .ypg-main ol li:first-child a {
   color: #337ab7;
 }
-.ypg-main ol li:last-child {
+.ypg-section .ypg-main ol li:last-child {
   padding-left: 10px;
 }
-.ypg-main ol li:last-child a:before {
+.ypg-section .ypg-main ol li:last-child a:before {
   content: "/\00a0";
 }
-.ypg-main .ypg-canvas {
+.ypg-section .ypg-main .ypg-canvas {
   margin-top: 30px;
   width: 100%;
 }
-.ypg-main .ypg-canvas .picTable {
+.ypg-section .ypg-main .ypg-canvas .picTable {
   float: left;
   width: 45%;
   height: 400px;
 }
-.ypg-main .ypg-canvas .picTable:first-child {
+.ypg-section .ypg-main .ypg-canvas .picTable:first-child {
   margin-right: 30px;
 }

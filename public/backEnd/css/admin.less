@@ -53,31 +53,42 @@ a{
   .menu{
     width: 100%;
     li{
-      width: 100%;
-      height: 40px;
+      width: 100%;     
       border: 4px solid transparent;
       padding-left: 30px;
-      box-sizing: border-box;
+      box-sizing: border-box;     
       a{
         width: 100%;        
         line-height: 40px;        
       }
       &.active{
         background-color: #666;
-        border-left: 4px solid blue;
+        border-left: 4px solid rgb(194, 140, 47);
       }
-      .hidden {
-        display: none;
+      .child {
+        // display: none;
+        a{
+          display: block !important;
+          height: 30px;
+          line-height: 30px;
+          padding-left: 20px;
+
+        }
       }
     }
   }
 }
 
 
-// 左侧
+// 右侧
 .ypg-section{
   width: 100%;
   padding-left: 180px;
+  //TODO:想想怎么加上动画
+  // transform: all 1s;
+  &.move{
+    padding-left: 0;
+  }
   // 顶部
   .ypg-nav{
     
@@ -100,49 +111,50 @@ a{
     }
 
   }
-}
-  // 主体
-.ypg-main {       
-    // width: 100%;
-    padding-top: 30px;
-  ol{
-
-    width: 100%;
-    border-radius: 5px;
-    padding: 8px 15px;
-    background-color: #ccc;
-    overflow: hidden;
-    li{
+    // 主体
+  .ypg-main {       
       // width: 100%;
-      float: left;
-    }
-    li:first-child{
-      a{
-        color:#337ab7;
-      }
-    }
-    li:last-child{
-      padding-left: 10px;
-      a:before {
-        content:"/\00a0"; 
-      }
-    }
-  }
+      padding-top: 30px;
+    ol{
 
-  // 饼图 柱状图
-  .ypg-canvas{
-    margin-top: 30px;
-    width: 100%;
-    .picTable{
-      float: left;
-      width: 45%;
-      height: 400px;
-      &:first-child{
-        margin-right: 30px;
+      width: 100%;
+      border-radius: 5px;
+      padding: 8px 15px;
+      background-color: #ccc;
+      overflow: hidden;
+      li{
+        // width: 100%;
+        float: left;
+      }
+      li:first-child{
+        a{
+          color:#337ab7;
+        }
+      }
+      li:last-child{
+        padding-left: 10px;
+        a:before {
+          content:"/\00a0"; 
+        }
       }
     }
+
+    // 饼图 柱状图
+    .ypg-canvas{
+      margin-top: 30px;
+      width: 100%;
+      .picTable{
+        float: left;
+        width: 45%;
+        height: 400px;
+        &:first-child{
+          margin-right: 30px;
+        }
+      }
+    }
+
   }
 
 }
-
+ 
 

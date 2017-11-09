@@ -32,20 +32,20 @@
     <div class="menu">
       <ul>
         <li class="active">
-          <span class="glyphicon glyphicon-user"></span>
-          <a href="javascript:;">用户管理</a>
+          
+          <a href="javascript:;"><span class="glyphicon glyphicon-user"></span>用户管理</a>
         </li>
         <li>
-          <span class="glyphicon glyphicon-list"></span>
-          <a href="javascript:;">分类管理</a>
-          <div class="hidden">
+          
+          <a href="#c11" data-toggle="collapse"><span class="glyphicon glyphicon-list"></span>分类管理</a>
+          <div class="child collapse" id="c11">
             <a href="javascript:;">一级分类</a>
             <a href="javascript:;">二级分类</a>
           </div>
         </li>
         <li>
-          <span class="glyphicon glyphicon-tags"></span>
-          <a href="javascript:;">商品管理</a>
+          
+          <a href="javascript:;"><span class="glyphicon glyphicon-tags"></span>商品管理</a>
         </li>
       </ul>
     </div>
@@ -56,7 +56,7 @@
     <!-- 顶部 -->
     <nav class="ypg-nav">
       <a href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
-      <a href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+      <a href="#myModal" data-toggle="modal"><span class="glyphicon glyphicon-log-out"></span></a>
     </nav>
     <!-- 主题展示区域 -->
     <main class="ypg-main container-fluid">
@@ -70,6 +70,31 @@
       </div>
     </main>
   </section>
+
+  <!-- 模态框 -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+          </div>
+          <div class="modal-body">
+            <p class="text-danger">
+              <i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？
+            </p>
+    
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <button type="button" class="btn btn-primary">确定</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
