@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>台管理系统--分类2</title>
+  <!-- 引入bootstrap库 -->
+  <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+  <!-- 引入NProgress -->
+  <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+  <!-- 引入表单验证插件的css -->
+  <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
+  <!-- 引入公共样式 -->
+  <link rel="stylesheet" href="./css/admin.css">
+  <!-- 引入当前页面的css -->
+
+  <link rel="stylesheet" href="./css/categoryFirst.css">
+</head>
+
+<body>
+  <!-- 侧边栏 -->
+  <aside class="ypg-aside">
+    <!-- 商标 -->
+    <div class="brand">
+      <a href="javascript:;">IT</a>
+    </div>
+    <!-- 用户 -->
+    <div class="user">
+      <img src="images/default.png" alt="">
+      <span>王冰洋</span>
+    </div>
+    <!-- 菜单 -->
+    <div class="menu">
+      <ul>
+        <li>
+
+          <a href="javascript:;" class="abc">
+            <span class="glyphicon glyphicon-user"></span>用户管理</a>
+        </li>
+        <li class="active">
+
+          <a href="javascript:;" class="abc">
+            <span class="glyphicon glyphicon-list"></span>分类管理</a>
+          <!-- <a href="#c11" data-toggle="collapse"><span class="glyphicon glyphicon-list"></span>分类管理</a> -->
+          <div class="child collapse" id="c11">
+            <a href="./categoryFirst.html">一级分类</a>
+            <a href="./categorySecond.html">二级分类</a>
+          </div>
+        </li>
+        <li>
+
+          <a href="javascript:;" class="abc">
+            <span class="glyphicon glyphicon-tags"></span>商品管理</a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+
+
+
+  <!-- 右侧 -->
+  <section class="ypg-section">
+    <!-- 顶部 -->
+    <nav class="ypg-nav">
+      <a href="javascript:;">
+        <span class="glyphicon glyphicon-align-justify"></span>
+      </a>
+      <a href="#myModal" data-toggle="modal">
+        <span class="glyphicon glyphicon-log-out"></span>
+      </a>
+    </nav>
+    <!-- 主题展示区域 -->
+    <main class="ypg-main container-fluid">
+      <ol>
+        <li>
+          <a href="javascript:;">管理系统</a>
+        </li>
+        <li>
+          <a href="javascript:;">商品分类2</a>
+        </li>
+      </ol>
+    </main>
+
+  </section>
+
+
+
+
+  <!-- 模态框 -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+        </div>
+        <div class="modal-body">
+          <p class="text-danger">
+            <i class="glyphicon glyphicon-info-sign"></i>您确定要退出后台管理系统吗？
+          </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="button" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- 引入jquery -->
+  <script src="./lib/jquery/jquery.min.js"></script>
+  <!-- 引入bootstrap的插件 -->
+  <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+  <!-- 引入echarts库 -->
+  <script src="./lib/echarts/echarts.min.js"></script>
+  <!-- 引入表单验证的插件 -->
+  <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+  <!-- 引入进度条插件 -->
+  <script src="./lib/nprogress/nprogress.js"></script>
+  <!-- 引入admin文件 -->
+  <script src="./js/admin.js"></script>
+  <!-- 引入index.js -->
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
