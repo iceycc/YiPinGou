@@ -87,55 +87,62 @@ a{
     a {
       height: 100%;
       padding-top:15px; 
-      color: #fff     
-    }
-    a:first-child{  
-      padding-left: 20px;    
-      float: left;
-    }
-    a:last-child{
-      padding-right: 20px;
-      float: right;
-    }
-  }
-  // 主体
-  .ypg-main {       
-      width: 100%;
-    ol{
-      width: 100%;
-      // height: 100%;
-      padding: 8px 15px;
-      background-color: #ccc;
-      li{
-        // width: 100%;
+      color: #fff;  
+
+      &:first-child{  
+        padding-left: 20px;    
         float: left;
       }
-      li:first-child{
-        a{
-          color:#337ab7;
-        }
-      }
-      li:last-child{
-        padding-left: 10px;
-        a:before {
-          content:"/\00a0";
-          
-        }
-      }
-    }
-    .ypg-canvas{
-      width: 100%;
-      &:first-child{
-        float: left;
-        width: 45%;
-        height: 400px;
-      }
-      &::last-child{
+      &:last-child{
+        padding-right: 20px;
         float: right;
-        width: 45%;
-        height: 400px;
-      }
+      }   
     }
 
   }
 }
+  // 主体
+.ypg-main {       
+    // width: 100%;
+    padding-top: 30px;
+  ol{
+
+    width: 100%;
+    border-radius: 5px;
+    padding: 8px 15px;
+    background-color: #ccc;
+    overflow: hidden;
+    li{
+      // width: 100%;
+      float: left;
+    }
+    li:first-child{
+      a{
+        color:#337ab7;
+      }
+    }
+    li:last-child{
+      padding-left: 10px;
+      a:before {
+        content:"/\00a0"; 
+      }
+    }
+  }
+
+  // 饼图 柱状图
+  .ypg-canvas{
+    margin-top: 30px;
+    width: 100%;
+    .picTable{
+      float: left;
+      width: 45%;
+      height: 400px;
+      &:first-child{
+        margin-right: 30px;
+      }
+    }
+  }
+
+}
+
+
