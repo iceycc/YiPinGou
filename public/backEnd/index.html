@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>乐淘云购后台管理系统</title>
+  <title>一品购后台管理系统</title>
   <!-- 引入bootstrap库 -->
   <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
   <!-- 引入NProgress -->
@@ -14,10 +15,64 @@
   <!-- 引入当前页面的css -->
   <link rel="stylesheet" href="./css/admin.css">
 </head>
-<body>
-  
 
-  
+<body>
+  <!-- 侧边栏 -->
+  <aside class="ypg-aside">
+    <!-- 商标 -->
+    <div class="brand">
+      <a href="javascript:;">IT</a>
+    </div>
+    <!-- 用户 -->
+    <div class="user">
+      <img src="images/default.png" alt="">
+      <span>万能管理员</span>
+    </div>
+    <!-- 菜单 -->
+    <div class="menu">
+      <ul>
+        <li class="active">
+          <span class="glyphicon glyphicon-user"></span>
+          <a href="javascript:;">用户管理</a>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-list"></span>
+          <a href="javascript:;">分类管理</a>
+          <div class="hidden">
+            <a href="javascript:;">一级分类</a>
+            <a href="javascript:;">二级分类</a>
+          </div>
+        </li>
+        <li>
+          <span class="glyphicon glyphicon-tags"></span>
+          <a href="javascript:;">商品管理</a>
+        </li>
+      </ul>
+    </div>
+
+  </aside>
+  <!-- 右侧 -->
+  <section class="ypg-section">
+    <!-- 顶部 -->
+    <nav class="ypg-nav">
+      <a href="javascript:;"><span class="glyphicon glyphicon-align-justify"></span></a>
+      <a href="javascript:;"><span class="glyphicon glyphicon-log-out"></span></a>
+    </nav>
+    <!-- 主题展示区域 -->
+    <main class="ypg-main container-fluid">
+      <ol>
+        <li><a href="javascript:;">管理系统</a></li>
+        <li><a href="javascript:;">首页</a></li>
+      </ol>
+      <div class="ypg-canvas">
+        <div class="picTable"></div>
+        <div class="picTable"></div>
+      </div>
+    </main>
+  </section>
+
+
+
 
 
   <!-- 引入jquery -->
@@ -35,4 +90,5 @@
   <!-- 引入index.js -->
   <script src="./js/index.js"></script>
 </body>
+
 </html>

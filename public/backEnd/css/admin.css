@@ -1,0 +1,120 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #111;
+}
+.ypg-aside {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #ccc;
+}
+.ypg-aside .brand {
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  text-align: center;
+  line-height: 50px;
+  background-color: #c28c2f;
+}
+.ypg-aside .brand a {
+  color: #fff;
+}
+.ypg-aside .user {
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.ypg-aside .user img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.ypg-aside .menu {
+  width: 100%;
+}
+.ypg-aside .menu li {
+  width: 100%;
+  height: 40px;
+  border: 4px solid transparent;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+.ypg-aside .menu li a {
+  width: 100%;
+  line-height: 40px;
+}
+.ypg-aside .menu li.active {
+  background-color: #666;
+  border-left: 4px solid blue;
+}
+.ypg-aside .menu li .hidden {
+  display: none;
+}
+.ypg-section {
+  width: 100%;
+  padding-left: 180px;
+}
+.ypg-section .ypg-nav {
+  height: 50px;
+  background-color: rgba(231, 151, 12, 0.925);
+}
+.ypg-section .ypg-nav a {
+  height: 100%;
+  padding-top: 15px;
+  color: #fff;
+}
+.ypg-section .ypg-nav a:first-child {
+  padding-left: 20px;
+  float: left;
+}
+.ypg-section .ypg-nav a:last-child {
+  padding-right: 20px;
+  float: right;
+}
+.ypg-section .ypg-main {
+  width: 100%;
+}
+.ypg-section .ypg-main ol {
+  width: 100%;
+  padding: 8px 15px;
+  background-color: #ccc;
+}
+.ypg-section .ypg-main ol li {
+  float: left;
+}
+.ypg-section .ypg-main ol li:first-child a {
+  color: #337ab7;
+}
+.ypg-section .ypg-main ol li:last-child {
+  padding-left: 10px;
+}
+.ypg-section .ypg-main ol li:last-child a:before {
+  content: "/\00a0";
+}
+.ypg-section .ypg-main .ypg-canvas {
+  width: 100%;
+}
+.ypg-section .ypg-main .ypg-canvas:first-child {
+  float: left;
+  width: 45%;
+  height: 400px;
+}
+.ypg-section .ypg-main .ypg-canvas::last-child {
+  float: right;
+  width: 45%;
+  height: 400px;
+}

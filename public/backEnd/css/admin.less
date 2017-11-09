@@ -1,0 +1,141 @@
+
+// 基本样式
+html,body{
+  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #111
+}
+
+// 侧边样式
+.ypg-aside{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 180px;
+  height: 100%;
+  background-color: #ccc;
+
+ 
+  .brand{
+    width: 100%;
+    height: 50px;
+    font-size: 30px;    
+    text-align: center;
+    line-height: 50px;
+    background-color: rgb(194, 140, 47);
+    a{
+      color:#fff;
+    }
+  }
+  .user{
+    // width: 100%;
+    margin: 0 auto;
+    // height: 110px;
+    padding:30px 20px;
+
+    img{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+  }
+  .menu{
+    width: 100%;
+    li{
+      width: 100%;
+      height: 40px;
+      border: 4px solid transparent;
+      padding-left: 30px;
+      box-sizing: border-box;
+      a{
+        width: 100%;        
+        line-height: 40px;        
+      }
+      &.active{
+        background-color: #666;
+        border-left: 4px solid blue;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+  }
+}
+
+
+// 左侧
+.ypg-section{
+  width: 100%;
+  padding-left: 180px;
+  // 顶部
+  .ypg-nav{
+    
+    height: 50px;;
+    
+    background-color: rgba(231, 151, 12, 0.925);
+    a {
+      height: 100%;
+      padding-top:15px; 
+      color: #fff     
+    }
+    a:first-child{  
+      padding-left: 20px;    
+      float: left;
+    }
+    a:last-child{
+      padding-right: 20px;
+      float: right;
+    }
+  }
+  // 主体
+  .ypg-main {       
+      width: 100%;
+    ol{
+      width: 100%;
+      // height: 100%;
+      padding: 8px 15px;
+      background-color: #ccc;
+      li{
+        // width: 100%;
+        float: left;
+      }
+      li:first-child{
+        a{
+          color:#337ab7;
+        }
+      }
+      li:last-child{
+        padding-left: 10px;
+        a:before {
+          content:"/\00a0";
+          
+        }
+      }
+    }
+    .ypg-canvas{
+      width: 100%;
+      &:first-child{
+        float: left;
+        width: 45%;
+        height: 400px;
+      }
+      &::last-child{
+        float: right;
+        width: 45%;
+        height: 400px;
+      }
+    }
+
+  }
+}
