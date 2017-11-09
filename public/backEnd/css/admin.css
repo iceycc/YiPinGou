@@ -60,6 +60,9 @@ a {
   background-color: #666;
   border-left: 4px solid #c28c2f;
 }
+.ypg-aside .menu li .child {
+  display: none;
+}
 .ypg-aside .menu li .child a {
   display: block !important;
   height: 30px;

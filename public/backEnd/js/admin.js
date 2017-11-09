@@ -26,13 +26,11 @@ $(".ypg-nav a:first-child").on("click",function () {
 
 // 点击左侧侧边栏中的选项显示折叠选项
 
-$(".ypg-aside .menu").on("click","[href='javascript:;']",function () { 
+$(".ypg-aside .menu").on("click","[class='abc']",function () { 
   var $_this = $(this)
   console.log(1)
   var $child = $_this.siblings()
   var $parent = $_this.parent()
   // $parent.toggleClass("active")
-
-
-  // $child.slideToggle()
+  $child.slideToggle()
 })
