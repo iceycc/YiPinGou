@@ -93,37 +93,3 @@ a {
   padding-right: 20px;
   float: right;
 }
-.ypg-section .ypg-main {
-  padding-top: 30px;
-}
-.ypg-section .ypg-main ol {
-  width: 100%;
-  border-radius: 5px;
-  padding: 8px 15px;
-  background-color: #ccc;
-  overflow: hidden;
-}
-.ypg-section .ypg-main ol li {
-  float: left;
-}
-.ypg-section .ypg-main ol li:first-child a {
-  color: #337ab7;
-}
-.ypg-section .ypg-main ol li:last-child {
-  padding-left: 10px;
-}
-.ypg-section .ypg-main ol li:last-child a:before {
-  content: "/\00a0";
-}
-.ypg-section .ypg-main .ypg-canvas {
-  margin-top: 30px;
-  width: 100%;
-}
-.ypg-section .ypg-main .ypg-canvas .picTable {
-  float: left;
-  width: 45%;
-  height: 400px;
-}
-.ypg-section .ypg-main .ypg-canvas .picTable:first-child {
-  margin-right: 30px;
-}

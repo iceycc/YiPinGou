@@ -1,0 +1,34 @@
+.ypg-main {
+  padding-top: 30px;
+}
+.ypg-main ol {
+  width: 100%;
+  border-radius: 5px;
+  padding: 8px 15px;
+  background-color: #ccc;
+  overflow: hidden;
+}
+.ypg-main ol li {
+  float: left;
+}
+.ypg-main ol li:first-child a {
+  color: #337ab7;
+}
+.ypg-main ol li:last-child {
+  padding-left: 10px;
+}
+.ypg-main ol li:last-child a:before {
+  content: "/\00a0";
+}
+.ypg-main .ypg-canvas {
+  margin-top: 30px;
+  width: 100%;
+}
+.ypg-main .ypg-canvas .picTable {
+  float: left;
+  width: 45%;
+  height: 400px;
+}
+.ypg-main .ypg-canvas .picTable:first-child {
+  margin-right: 30px;
+}
