@@ -29,6 +29,7 @@ $(function () {
 
   // 使用刚指定的配置项和数据显示图表。
   myChart.setOption(option);
+  
 
   // 饼状图
   var pieChart = document.querySelector(".picTable:last-child")
@@ -85,5 +86,9 @@ $(function () {
     }]
   };
   secondCarts.setOption(secondOption);
+
+  console.table(secondOption)
+  
+  // console.log(secondOption)
 
 })

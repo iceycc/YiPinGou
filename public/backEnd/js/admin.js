@@ -18,7 +18,7 @@ $(window).ajaxComplete(function () {
 $(".ypg-nav a:first-child").on("click",function () {
   console.log(1)
   $(".ypg-aside").toggle()
-
+  Math.abs()
   //TODO:想想怎么加上动画
   $(".ypg-section").toggleClass("move")  
 })
@@ -33,4 +33,9 @@ $(".ypg-aside .menu").on("click","[class='abc']",function () {
   var $parent = $_this.parent()
   // $parent.toggleClass("active")
   $child.slideToggle()
+})
+
+// 点击退出确定按钮 通过ajax请求 一个js后台文件 然后实现退出
+$(".loginout-btn button:last-child").on("click",function () {
+  $.get("/backEnd/js/loginout.js")
 })
