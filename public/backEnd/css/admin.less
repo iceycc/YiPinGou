@@ -136,7 +136,7 @@ a{
           color:#337ab7;
         }
       }
-      li:last-child{
+      li+li{
         padding-left: 10px;
         a:before {
           content:"/\00a0"; 
@@ -144,6 +144,37 @@ a{
       }
     }
   }
+
+
+
+  // 控制表格整体样式
+table.table {
+  
+}
+.mt_20 {
+  margin-top: 20px;
+}
+
+._tb{
+  margin-top: 20px;
+  
+  thead,tbody{
+    
+    tr{
+      
+      display: flex;      
+    }
+    th:first-child,td:first-child{
+      text-align: center;
+      flex: 1
+    }
+    th+th,td+td{
+      text-align: center;
+      flex:3
+    }
+
+  }
+}
 
 
 

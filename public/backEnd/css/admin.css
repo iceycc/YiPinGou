@@ -109,9 +109,33 @@ a {
 .ypg-main ol li:first-child a {
   color: #337ab7;
 }
-.ypg-main ol li:last-child {
+.ypg-main ol li + li {
   padding-left: 10px;
 }
-.ypg-main ol li:last-child a:before {
+.ypg-main ol li + li a:before {
   content: "/\00a0";
+}
+.mt_20 {
+  margin-top: 20px;
+}
+._tb {
+  margin-top: 20px;
+}
+._tb thead tr,
+._tb tbody tr {
+  display: flex;
+}
+._tb thead th:first-child,
+._tb tbody th:first-child,
+._tb thead td:first-child,
+._tb tbody td:first-child {
+  text-align: center;
+  flex: 1;
+}
+._tb thead th + th,
+._tb tbody th + th,
+._tb thead td + td,
+._tb tbody td + td {
+  text-align: center;
+  flex: 3;
 }
