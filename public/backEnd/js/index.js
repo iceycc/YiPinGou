@@ -87,7 +87,7 @@ $(function () {
   };
   secondCarts.setOption(secondOption);
 
-  console.table(secondOption)
+  // console.table(secondOption)
   
   // console.log(secondOption)
 

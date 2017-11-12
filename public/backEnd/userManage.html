@@ -15,7 +15,7 @@
   <!-- 引入公共的css -->
   <link rel="stylesheet" href="./css/admin.css">
   <!-- 引入当前css -->
-  <link rel="stylesheet" href="./css/index.css">
+  <!-- <link rel="stylesheet" href="./css/index.css"> -->
 </head>
 
 <body>
@@ -33,9 +33,9 @@
     <!-- 菜单 -->
     <div class="menu">
       <ul>
-        <li>
+        <li class="active">
 
-          <a href="javascript:;" class="abc">
+          <a href="./userManage.html" class="abc">
             <span class="glyphicon glyphicon-user"></span>用户管理</a>
         </li>
         <li>
@@ -48,9 +48,9 @@
             <a href="./categorySecond.html">二级分类</a>
           </div>
         </li>
-        <li class="active">
+        <li>
 
-          <a href="javascript:;" class="abc">
+          <a href="./" class="abc">
             <span class="glyphicon glyphicon-tags"></span>商品管理</a>
         </li>
       </ul>
@@ -95,15 +95,14 @@
             </tr>
           </thead>
         </table>
-        
+        <tbody>
+
+        </tbody>
+
       </div>
 
     </main>
   </section>
-
-
-
-
   <!-- 模态框 -->
   <!-- Modal -->
   <div class="modal fade" id="myModal" tabindex="-1">
@@ -131,22 +130,47 @@
 
 
 
+  <script type="text/template" id="usermanage-template">
+    <%for(var i = 0; i<rows.length;i++){%>
 
+      <tr class="text-center">
+        <td>
+          <%=(page-1)*size+i+1%>
+        </td>
+        <td>
+          <%=rows[i].username%>
+        </td>
+        <td>
+          <%=rows[i].mobile%>
+        </td>
+        <td>
+          <%=rows[i].isDelete==1?'禁用':'正常'%>
+        </td>
+        <td>
+          <%if(rows[i].isDelete == 1) {%>
+            <a data-id="<%=rows[i].id%>" data-name="<%=rows[i].username%>" href="#manage-modal" data-toggle="modal" class="btn btn-primary">启用</a>
+            <%}else {%>
+              <a data-id="<%=rows[i].id%>" data-name="<%=rows[i].username%>" href="#manage-modal" data-toggle="modal" class="btn btn-danger">禁用</a>
+              <%}%>
+        </td>
+      </tr>
+      <%}%>
+  </script>
 
   <!-- 引入jquery -->
   <script src="./lib/jquery/jquery.min.js"></script>
   <!-- 引入bootstrap的插件 -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <!-- 引入echarts库 -->
-  <script src="./lib/echarts/echarts.min.js"></script>
   <!-- 引入表单验证的插件 -->
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <!-- 引入进度条插件 -->
   <script src="./lib/nprogress/nprogress.js"></script>
+  <!-- y引入模版引擎 -->
+  <script src="./lib/artTemplate/template-native.js"></script>
   <!-- 引入admin文件 -->
   <script src="./js/admin.js"></script>
   <!-- 引入index.js -->
-  <script src="./js/index.js"></script>
+  <script src="./js/userManage.js"></script>
 </body>
 
 </html>

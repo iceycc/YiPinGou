@@ -16,9 +16,9 @@ $(window).ajaxComplete(function () {
 // 点击顶部按钮隐藏显示左侧栏
 
 $(".ypg-nav a:first-child").on("click",function () {
-  console.log(1)
+  // console.log(1)
   $(".ypg-aside").toggle()
-  Math.abs()
+  // Math.abs()
   //TODO:想想怎么加上动画
   $(".ypg-section").toggleClass("move")  
 })
@@ -28,7 +28,7 @@ $(".ypg-nav a:first-child").on("click",function () {
 
 $(".ypg-aside .menu").on("click","[class='abc']",function () { 
   var $_this = $(this)
-  console.log(1)
+  // console.log(1)
   var $child = $_this.siblings()
   var $parent = $_this.parent()
   // $parent.toggleClass("active")
@@ -37,5 +37,8 @@ $(".ypg-aside .menu").on("click","[class='abc']",function () {
 
 // 点击退出确定按钮 通过ajax请求 一个js后台文件 然后实现退出
 $(".loginout-btn button:last-child").on("click",function () {
-  $.get("/backEnd/js/loginout.js")
+  // $.get("/backEnd/api/loginout.php")
+  $.get("/backEnd/api/loginout.js")
+
+
 })

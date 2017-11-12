@@ -30,23 +30,23 @@
           </div>
           <div class="panel-body">
             <!-- 表单提交 -->
-            <form class="form-horizontal">
+            <form class="form-horizontal" id="login-form">
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-3 control-label">用户名</label>
+                <label for="username" class="col-sm-3 control-label">用户名</label>
                 <div class="col-sm-9">
-                  <input type="email" class="form-control" id="inputEmail3" placeholder="请输入用户名">
+                  <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名">
                   <!-- <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span> -->
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-3 control-label">密码</label>
+                <label for="password" class="col-sm-3 control-label">密码</label>
                 <div class="col-sm-9">
-                  <input type="password" class="form-control" id="inputPassword3" placeholder="请输入密码">
+                  <input type="password" class="form-control" id="password" name="password" placeholder="请输入密码">
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-3 col-sm-9">
-                  <button type="submit" class="btn btn-default mr_50">重置</button>
+                  <button type="reset" class="btn btn-default mr_50">重置</button>
                   <button type="submit" class="btn btn-primary">登陆</button>
                 </div>
               </div>
@@ -68,16 +68,17 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <!-- 引入bootstrap的插件 -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <!-- 引入echarts库 -->
-  <script src="./lib/echarts/echarts.min.js"></script>
   <!-- 引入表单验证的插件 -->
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <!-- 引入进度条插件 -->
   <script src="./lib/nprogress/nprogress.js"></script>
-  <!-- 引入admin文件 -->
-  <script src="./js/admin.js"></script>
-  <!-- 引入index.js -->
-  <script src="./js/index.js"></script>
+
+
+
+
+  <script src="./js/login.js"></script>
+
+
 </body>
 
 </html>

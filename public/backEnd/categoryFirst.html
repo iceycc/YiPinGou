@@ -36,7 +36,7 @@
       <ul>
         <li>
 
-          <a href="javascript:;" class="abc">
+          <a href="./userManage.html" class="abc">
             <span class="glyphicon glyphicon-user"></span>用户管理</a>
         </li>
         <li class="active">
@@ -85,7 +85,7 @@
           <a href="javascript:;">一级分类</a>
         </li>
       </ol>
-      <button class="btn btn-default">添加分类</button>
+      <button class="btn btn-default" data-target="#first-modal" data-toggle="modal">添加分类</button>
       <div class="">
         <table class="table table-bordered table-hover mt_20">
           <thead>
@@ -99,27 +99,16 @@
               <td>2</td>
               <td>鞋类</td>
             </tr>
-            <tr>
-              <td>2</td>
-              <td>鞋类</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>鞋类</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>鞋类</td>
-            </tr>
           </tbody>
         </table>
+        <div class="page">
+          <ul class="pagination"></ul>
+        </div>
       </div>
 
     </div>
 
   </section>
-
-
 
 
   <!-- 模态框 -->
@@ -131,7 +120,7 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
-          <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+          <h4 class="modal-title" id="myModalLabel1">温馨提示</h4>
         </div>
         <div class="modal-body">
           <p class="text-danger">
@@ -146,6 +135,52 @@
       </div>
     </div>
   </div>
+  <div>
+  </div>
+
+  <!--添加  -->
+  <div class="modal fade" id="first-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title">添加分类</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal" id="first-form">
+            <div class="form-group">
+              <div class="col-sm-12">
+                <input type="text" name="categoryName" class="form-control" id="categoryName" placeholder="输入一级分类">
+              </div>
+            </div>
+          </form>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <button type="submit" id="save" form="first-form" class="btn btn-primary">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <script type="text/template" id="first-template">
+    <%for(var i=0; i<rows.length; i++){%>
+      <tr>
+        <td>
+          <%=(page-1)*size+i+1%>
+        </td>
+        <td>
+          <%=rows[i].categoryName%>
+        </td>
+      </tr>
+      <%}%>
+  </script>
 
 
 
@@ -155,16 +190,20 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <!-- 引入bootstrap的插件 -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <!-- 引入echarts库 -->
-  <script src="./lib/echarts/echarts.min.js"></script>
+
   <!-- 引入表单验证的插件 -->
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <!-- 引入进度条插件 -->
   <script src="./lib/nprogress/nprogress.js"></script>
   <!-- 引入admin文件 -->
   <script src="./js/admin.js"></script>
+  <!-- 分页 -->
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+
+  <!-- 引入模版引擎 -->
+  <script src="./lib/artTemplate/template-native.js"></script>
   <!-- 引入index.js -->
-  <script src="./js/index.js"></script>
+  <script src="./js/categoryFirst.js"></script>
 </body>
 
 </html>
