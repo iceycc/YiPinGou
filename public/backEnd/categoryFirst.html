@@ -51,7 +51,7 @@
         </li>
         <li>
 
-          <a href="javascript:;" class="abc">
+          <a href="./productManage.html" class="abc">
             <span class="glyphicon glyphicon-tags"></span>商品管理</a>
         </li>
       </ul>
@@ -107,12 +107,11 @@
       </div>
 
     </div>
-
   </section>
 
 
   <!-- 模态框 -->
-  <!-- Modal -->
+  <!-- Modal 退出提示 -->
   <div class="modal fade" id="myModal" tabindex="-1">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -135,10 +134,9 @@
       </div>
     </div>
   </div>
-  <div>
-  </div>
 
-  <!--添加  -->
+
+  <!--添加分类模态框  -->
   <div class="modal fade" id="first-modal" tabindex="-1">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
@@ -164,13 +162,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> 
 
 
- 
-
-
-
+  <!-- 模板引擎 -->
   <script type="text/template" id="first-template">
     <%for(var i=0; i<rows.length; i++){%>
       <tr>
@@ -183,10 +178,6 @@
       </tr>
       <%}%>
   </script>
-
-
-
-
 
   <!-- 引入jquery -->
   <script src="./lib/jquery/jquery.min.js"></script>

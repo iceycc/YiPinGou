@@ -27,7 +27,7 @@ var getFirstDate = function (pageNum) {
       $("tbody").html(firstResult);
 
 
-      //TODO:分页功能
+      //分页功能
       var options = {
         bootstrapMajorVersion: 3,
         size: 'small',
