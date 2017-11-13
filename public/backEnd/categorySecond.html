@@ -86,7 +86,7 @@
         </li>
       </ol>
 
-      <button class="btn btn-default">添加分类</button>
+      <button class="btn btn-default" data-toggle="modal" data-target="#second-modal">添加分类</button>
       <div>
         <table class="table table-bordered table-hover _tb">
           <thead>
@@ -110,15 +110,13 @@
               <td>3</td>
               <td>4</td>
             </tr>
-            <tr>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-            </tr>
+
           </tbody>
 
         </table>
+        <div>
+          <ul class="fenye"></ul>
+        </div>
       </div>
     </main>
 
@@ -153,6 +151,75 @@
   </div>
 
 
+  <!-- 添加模态框 -->
+  <!-- 添加模态框的注意点
+      1-引入合适的模态框模版
+      2-设置合适的模态框id
+      3-给需要绑定的元素(按钮或者a标签等)
+      4-给点击的元素设置data-toggle     
+    -->
+  <!-- 表单验证4 -->
+  <div class="modal fade" id="second-modal" tabindex="-1">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+          <h4 class="modal-title" id="second">添加分类</h4>
+        </div>
+        <div class="modal-body">
+          <div class="dropdown">
+            <span>一级分类：</span>
+            <button class="btn btn-default" id="dLabel" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="dropdown-text">游泳馆</span>
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+
+            </ul>
+          </div>
+          <form id="secondform" enctype="multipart/form-data">
+            <input id="categoryId" type="hidden" name="categoryId">
+            <div class="form-group" style="margin-top: 20px;">
+              <label class="sr-only" for="brandName">二级分类</label>
+              <input type="text" class="form-control" name="brandName" id="brandName" placeholder="请输入二级分类">
+            </div>
+            <div class="form-group fileupload">
+              <!-- 隐藏表单 
+                      $('[name="brandLogo"]')
+                    -->
+              <input type="hidden" id="brandLogo" name="brandLogo">
+              <a href="javascript:;" class="btn btn-default">上传图片</a>
+              <input type="file" name="pic1" id="secondupload">
+            </div>
+            <div class="preview">
+              <img width="100" height="100" id="previewimg" src="./images/none.png" alt="">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          <!-- submit按钮在form表单外面 可以添加 form="表单id" 链接响应的表单 -->
+          <button type="submit" id="save" class="btn btn-primary" form="secondform">确定</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 模板引擎 -->
+  <script type="text/tempale" id="second-tempale">
+    <%for(var i=0;i<rows.length;i++){%> 
+      <tr>
+        <td><%=(page-1)*size+i+1%></td>
+        <td><%=rows[i].categoryName%></td>
+        <td><%=rows[i].brandName%></td>
+        <td><img width="50" height="auto" src="<%=rows[i].brandLogo%>" alt=""></td>
+      </tr>
+      <%}%>
+  </script>
+
 
 
 
@@ -160,16 +227,21 @@
   <script src="./lib/jquery/jquery.min.js"></script>
   <!-- 引入bootstrap的插件 -->
   <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
-  <!-- 引入echarts库 -->
-  <script src="./lib/echarts/echarts.min.js"></script>
   <!-- 引入表单验证的插件 -->
   <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
   <!-- 引入进度条插件 -->
   <script src="./lib/nprogress/nprogress.js"></script>
+  <!-- 引入模版引擎 -->
+  <script src="./lib/artTemplate/template-native.js"></script>
+  <!-- 引入分页 -->
+  <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+  <!-- 引入上传文件 -->
+  <script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+  <script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
   <!-- 引入admin文件 -->
   <script src="./js/admin.js"></script>
   <!-- 引入index.js -->
-  <script src="./js/index.js"></script>
+  <script src="./js/categorySecond.js"></script>
 </body>
 
 </html>
