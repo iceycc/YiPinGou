@@ -1,0 +1,97 @@
+// 这里写公共的css样式
+/*公共的样式*/
+* {
+  // 设置或检索对象的轻按时高亮
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body, ul, p, h1, h2, h3, h4, h5, h6 {
+	padding: 0;
+	margin: 0;
+	
+}
+
+body {
+	font-size: 16px;
+	font-family: PingFangSC-Regular, Helvetica, "Droid Sans", Arial, sans-serif;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	display: block;
+	text-decoration: none;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+input {
+	display: block;
+	padding: 0;
+	margin: 0;
+	border: 0 none;
+	outline: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-webkit-appearance: none;
+}
+
+
+
+// 公共部分
+// 头部
+header{
+ position: fixed;
+ top: 0;
+ left: 0; 
+  width: 100%;
+ height: 45px;
+ background-color: #ffbb00; 
+ z-index: 10;
+	h1{
+		width: 100%;   
+		line-height: 45px;
+		text-align: center;
+		font-weight: normal;
+		font-size: 17px;
+		color:#fff
+	}
+}
+
+
+// 底部// 底部
+footer{
+  position: fixed;
+  bottom:0;
+  left: 0;  
+  width: 100%;
+  height: 45px;
+  background-color: #ffbb00;
+  box-sizing: border-box;
+  a{   
+    position: relative;
+    // TODO:为什么25% 不是评分呢
+    width: 24%;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding-top: 25px;
+    span{
+      height: 100%;
+      // padding-top: 30px
+    }
+    &:before{
+      position: absolute;
+      top: 7px;
+      left: 50%;
+      font-size: 17px;
+      transform: translateX(-50%);
+    }
+  }
+
+}

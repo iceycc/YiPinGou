@@ -1,0 +1,106 @@
+// 这里写首页的css样式
+/*这里写首页的css样式*/
+
+// 
+.mb_layout,body{
+  background-color: #fff;
+}
+
+// header
+header{ 
+ a{
+   position: absolute;
+   top:10px;;
+   right: 5px;
+   color: #fff;
+ }
+}
+// 主要展示区
+main{
+  width: 100%;
+  margin-top: 45px;
+}
+
+// 中间活动专区
+.mb_active{
+  width: 100%;
+  font-size: 0;
+  a{
+    vertical-align:top;
+    font-size: 0;
+    display: inline-block;
+    img{
+      display: inline-block;
+      vertical-align:middle;
+      
+    }
+    &:nth-child(1){    
+      width: 66.666%;
+      img{
+        width: 50%;
+      }
+
+    }
+    &:nth-child(2){
+      width: 33.333%;
+      img{
+        width: 100%;
+      }
+    }
+  }
+
+}
+// 品牌专区
+.mb_brand{
+  ul{
+    width:100%;
+    li{
+      width:25%;
+      float: left;
+    }
+  }
+}
+
+// 各种专区
+.mb_live{
+  ul{
+    width:100%;
+    text-align: center;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    a{
+      box-sizing: border-box;
+      border: 1px solid #ccc;
+      box-shadow: 0 0 5px #ccc;
+    }
+    li{
+      width:50%;
+      float:left;
+      box-sizing: border-box;
+      p{
+        font-size: 14px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #8f8f94;
+      }
+      p:nth-child(3){
+        span:first-child{
+          font-size: 12px;
+          color: #f30;
+          margin-right: 10px;
+        }
+        span:last-child{
+          text-decoration: line-through;
+        }
+      }
+
+      &:nth-child(2n-1){
+        padding-right: 5px;
+      }
+
+    }
+  }
+
+}
+
+
