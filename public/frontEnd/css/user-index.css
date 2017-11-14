@@ -1,0 +1,31 @@
+.user-main {
+  width: 100%;
+}
+.user-main .user-info {
+  width: 100%;
+}
+.user-main .user-info img {
+  display: inline-block;
+  font-size: 0;
+  width: 40px;
+  vertical-align: top;
+}
+.user-main .user-info div {
+  padding-left: 10px;
+  padding-top: 4px;
+  display: inline-block;
+}
+.user-main .user-btn {
+  width: 100%;
+  padding: 0px 30px;
+  margin-top: 20px;
+}
+.user-main .loginout {
+  width: 100%;
+  height: 30px;
+  box-sizing: border-box;
+  border-radius: 4px;
+  line-height: 30px;
+  text-align: center;
+  border: 1px solid #ccc;
+}

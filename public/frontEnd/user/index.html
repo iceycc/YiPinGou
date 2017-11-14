@@ -14,7 +14,7 @@
   <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
   <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>乐淘云购</title>
+  <title>个人中心</title>
   <!-- 引入mui的css文件 -->
   <link rel="stylesheet" href="../lib/mui/css/mui.min.css">
   <!-- 字体图标库 -->
@@ -22,17 +22,46 @@
   <!-- 引入公共样式 -->
   <link rel="stylesheet" href="../css/comment.css">
   <!-- 引入当前页面的css -->
+  <link rel="stylesheet" href="../css/user-index.css">
 
 </head>
 
 <body>
   <div class="mb_layout">
     <!-- 顶部固定 -->
-    <header>
-       <h1>会员中心</h1>
+    <header class="mui-bar mui-bar-nav">
+      <a href="javascript:;" class="fa fa-arrow-left"></a>
+      <h1 class="mui-title">会员中心</h1>
     </header>
 
     <!-- 主体展示区 可滚动 -->
+    <main class="user-main">
+      <div class="main-xx">
+        <ul class="mui-table-view">
+          <li class="mui-table-view-cell user-info">
+            <a href="javascript:;" class="mui-navigate-right">
+              <img src="../images/user.jpg" alt="">
+              <div>
+                <p>11111111111</p>
+                <p>绑定手机号：11111111111</p>
+              </div>
+            </a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">账号与安全</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">我的购物车</a>
+          </li>
+          <li class="mui-table-view-cell">
+            <a class="mui-navigate-right">收获地址管理</a>
+          </li>
+        </ul>
+      </div>
+      <div class="user-btn">
+        <div class="loginout">退出登陆</div>
+      </div>
+    </main>
 
 
     <!-- 底部固定切换栏 -->

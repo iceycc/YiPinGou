@@ -9,10 +9,6 @@ header a {
   right: 5px;
   color: #fff;
 }
-main {
-  width: 100%;
-  margin-top: 45px;
-}
 .mb_active {
   width: 100%;
   font-size: 0;
@@ -77,4 +73,7 @@ main {
 }
 .mb_live ul li:nth-child(2n-1) {
   padding-right: 5px;
+}
+.mb_live:last-child {
+  margin-bottom: 100px;
 }

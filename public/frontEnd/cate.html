@@ -94,21 +94,46 @@
       <a class="tab_cart fa fa-shopping-cart" href="cart.html">
         <span>购物车</span>
       </a>
-      <a class="tab_user fa fa-user" href="login.html">
+      <a class="tab_user fa fa-user" href="user/index.html">
         <span>会员中心</span>
       </a>
     </footer>
   </div>
 
   <!-- 模板引擎 -->
+  <!-- 侧边栏模版引擎 -->
   <script type="text/template" id="cate-template">
+    <%for(var i=0;i < rows.length;i++){%>
+      <%if(i==0){%>
+        <li>
+          <a class="active" href="javascript:;" data-id="<%=rows[i].id%>">
+            <%=rows[i].categoryName%>
+          </a>
+        </li>
+        <%}else{%>
+          <li>
+            <a href="javascript:;" data-id="<%=rows[i].id%>">
+              <%=rows[i].categoryName%>
+            </a>
+          </li>
+          <%}%>
+            <%}%>
+
+  </script>
+  <!-- 右侧模板引擎 -->
+  <script type="text/temolate" id="cate-r-temlate">
+    <%if(rows.length==0){%>
+      <li>没有数据</li>
+    <%}else{%>
     <%for(var i=0;i<rows.length;i++){%>
       <li>
-        <a href="javascript:;" data-id="<%=rows[i].id%>">
-          <%=rows[i].categoryName%>
-        </a>
+        <img src="<%=rows[i].brandLogo%>" alt="">
+        <p><%=rows[i].brandName%></p>
       </li>
-      <%}%>
+      <li>
+        <%}%>
+    <%}%>
+
   </script>
 
   <script src="./lib/mui/js/mui.min.js"></script>
