@@ -9,6 +9,9 @@ header a {
   right: 5px;
   color: #fff;
 }
+main {
+  margin-bottom: 45px;
+}
 .mb_active {
   width: 100%;
   font-size: 0;

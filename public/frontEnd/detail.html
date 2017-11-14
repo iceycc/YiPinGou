@@ -14,7 +14,7 @@
   <meta name="description" content="乐淘是中国最大的正品运动鞋、皮鞋网上专卖。乐淘网经营的品牌包括耐克、阿迪达斯、李宁、匡威等国内外知名品牌的篮球鞋,板鞋,休闲鞋,跑步鞋,帆布...">
   <meta name="Keywords" content="乐淘 乐淘鞋城 买鞋子 上乐淘 运动鞋 篮球鞋 帆布鞋 跑步鞋 男鞋 女鞋 足球鞋 休闲鞋 凉鞋 户外鞋 布洛克 高跟鞋 单鞋 豆豆鞋 乐福鞋 牛津鞋 凉拖 皮鞋 短靴 长靴 登山鞋 徒步鞋 硫化鞋 训练鞋 溯溪鞋 越野鞋 板鞋 足球鞋 网球鞋 赛车鞋 雪地靴 马丁靴 商务 英伦">
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <title>搜索中心</title>
+  <title>商品详情</title>
   <!-- 引入mui的css文件 -->
   <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
   <!-- 字体图标库 -->
@@ -22,7 +22,7 @@
   <!-- 引入公共样式 -->
   <link rel="stylesheet" href="./css/comment.css">
   <!-- 引入当前页面的css -->
-  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/detail.css">
 
 </head>
 
@@ -34,29 +34,89 @@
       <!-- <a class="fa fa-search mui-pull-right"></a> -->
       <h1 class="mui-title">
         <div class="mui-input-row">
-          <h1>搜索中心</h1>
+          <h1>商品详情</h1>
         </div>
       </h1>
-    </header>    
+    </header>
+
+
     <!-- 主体展示区 可滚动 -->
-    <main class="mui-content lt-search">
-      <form>
-        <div class="search-box">
-          <span><a href="./searchLis.html" style="color:#fff">搜索</a></span>
-          <input type="text" placeholder="搜索你喜欢的商品">
+
+    <!-- <main> -->
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <div class="mui-content lt-detail">
+            <!-- 轮播图 -->
+            <div class="mui-slider">
+              <div class="mui-slider-group mui-slider-loop">
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                  <a href="#">
+                    <img src="./images/detail.jpg" alt="">
+                  </a>
+                </div>
+                <div class="mui-slider-item">
+                  <a href="#">
+                    <img src="./images/detail.jpg" alt="">
+                  </a>
+                </div>
+
+                <div class="mui-slider-item mui-slider-item-duplicate">
+                  <a href="#">
+                    <img src="./images/detail.jpg" alt="">
+                  </a>
+                </div>
+              </div>
+              <div class="mui-slider-indicator">
+                <div class="mui-indicator mui-active"></div>
+                <div class="mui-indicator"></div>
+              </div>
+            </div>
+            <!-- 商品名称 -->
+            <p class="detail-name">Sport飓风 Nike Kwazi 休闲运动鞋男 844839-002-001-100-400</p>
+            <!-- 价格 -->
+            <div class="detail-price">
+              <span>价格：</span>
+              <span class="new">￥499.1</span>
+              <span class="old">￥888.1</span>
+            </div>
+            <!-- 尺码 -->
+            <div class="detail-size">
+              <span>尺码：</span>
+              <span>30</span>
+              <span>31</span>
+              <span>32</span>
+              <span>33</span>
+              <span>34</span>
+              <span>35</span>
+              <span>36</span>
+              <span>37</span>
+              <span>38</span>
+              <span>39</span>
+              <span>40</span>
+              <span>41</span>
+              <span>42</span>
+              <span>43</span>
+              <span>44</span>
+              <span>45</span>
+              <span>46</span>
+              <span>47</span>
+              <span>48</span>
+              <span>49</span>
+              <span>50</span>
+            </div>
+            <!-- 数量 -->
+            <div class="detail-num">
+              <span>数量:</span>
+              <span>-</span>
+              <span>0</span>
+              <span>+</span>
+              <span>剩余20件</span>
+            </div>
+          </div>
         </div>
-      </form>
-      <div class="search-history">
-        <div class="search-history-title mui-clearfix">
-          <span class="mui-pull-left">搜索历史</span>
-          <span class="mui-pull-right">
-            <i class="fa fa-trash clear-data"></i> 清空记录</span>
-        </div>
-        <ul class="search-history-list">
-          <!--  -->
-        </ul>
-      </div>''
-    </main>
+      </div>
+    <!-- </main> -->
+
 
     <!-- 底部固定切换栏 -->
     <footer class="mb_tabs">
@@ -77,11 +137,13 @@
 
   <script type="text/template" id="search-template">
     <%for(var i=0;i<res.length;i++){%>
-    <li>
-      <span class="mui-pull-left" data-id="<%=i%>"><%=res[i]%></span>
-      <i class="fa fa-times mui-pull-right"></i>
-    </li>
-    <%}%>
+      <li>
+        <span class="mui-pull-left" data-id="<%=i%>">
+          <%=res[i]%>
+        </span>
+        <i class="fa fa-times mui-pull-right"></i>
+      </li>
+      <%}%>
 
 
   </script>
@@ -91,7 +153,7 @@
   <script src="./lib/zepto/zepto.min.js"></script>
   <script src="./lib/artTemplate/template-native.js"></script>
   <!-- 引入js -->
-  <script src="./js/search.js"></script>
+  <script src="./js/detail.js"></script>
 
 </body>
 
