@@ -1,52 +1,96 @@
 $(function(){
 
-  getLocalStorage()
-  // 判断本地是否有localStorage是否有搜索
-  
-  if (!localStorage.getItem("search")){
-    var searchList = []
-  }else{
-    var searchList = localStorage.getItem("search").split(",")
-    
-  }
-  
-  // 点击搜索 获取输入框内填写的内容 添加到本地  
-  $(".search-box span").on("click",function(){    
-    var val_hist = $("[type='text']").val()
-    // console.log(val_hist)
-    // 设置localStorage
-    if (val_hist!==""){
-      searchList.push(val_hist)
-      var str = searchList.join(",")
-      // console.log(str)
-      localStorage.setItem("search", str)     
-    }
+  // 1-页面加载
+  showHistory()
+  // 2-点击搜索把 输入的内容添加到历史记录
+  var valueInput = $(".search-box input")
+  $('#search-btn').on("tap",function(){
+    // console.log(1)
+    var keyWord = valueInput.val()
+    addHostory(keyWord)
+    showHistory()
+    // 点击搜索按钮把当前输入的内容通过url传参
+    var hisList = getLs()
+    console.log(keyWord)
+    var baseUrl = $(this).find("a").prop("href")   
+    var finalUrl = baseUrl + "?keyWord=" + keyWord 
+    $(this).find("a").prop("href", finalUrl)
   })
-
-  // 点击清空记录 全部删除
-  $(".clear-data").on("click",function () {
+  // 3-点击清空历史按钮 将历史记录删除
+  $('#clear-history').on('tap', function () {
     console.log(1)
-    localStorage.removeItem("search")
-    $(".search-history-list").html("")
-    getLocalStorage()
+    // 为什么不用localStorage.clear(); 怕影响其他网站或本网站的功能
+    localStorage.removeItem('ltHistory');
+  })
+  // 4-点击删除 删除选中项
+  $(".search-history-list").on('tap', 'i', function () {
+    var deleteData = $(this).siblings('span').html();
+    // console.log(deleteData);
+
+    removeH(deleteData);
+    showHistory();
   })
 
-  // 点击历史记录某一行,删除改行TODO:
- 
+  // $(window).ajaxStart(function () {
+  //   console.log(1)
+  // });
+  // $(window).ajaxComplete(function () {
+  //   console.log(2)
+  // });
+
 
 
 })
+  
 
 
- //- 声明一个 渲染搜索历史列表的函数 
-      //获取localStorage数据 动态添加到下拉的搜索历史
-var getLocalStorage = function () {
-  if (localStorage.getItem("search")){
-    var searchArr = localStorage.getItem("search").split(",")
+
+
+//1- 获取当前的localStorage数据
+var getLs = function(){
+  return JSON.parse(window.localStorage.getItem('search') || '[]');
+}
+
+
+//2- 添加输入内容到localStorage
+var addHostory = function (value) { 
+  var list = getLs()
+  // 遍历数组
+  $.each(list,function(i,item) {
+    if(value==item){
+      list.splice(i,1)
+    }
+  })
+  list.push(value)
+  localStorage.setItem("search",JSON.stringify(list)) ;
+}
+
+
+
+// 3=移出数据
+var removeH = function(value){
+  var list = getLs()
+  $.each(list,function(i,item){
+    list.splice(i,1)
+  })
+  window.localStorage.setItem("search",JSON.stringify(list))
+}
+
+
+//4-将localStorage数据渲染到搜索历史
+var showHistory = function () {
+  var searchArr = getLs()
+  if (searchArr.length == 0) {
+    $(".empty-history").show()
+    $(".search-history").hide()
+  } else {
     var data = { res: searchArr }
-    // console.log(data)
-    var list = template("search-template",data)
+    var list = template("search-template", data)
     // console.log(list)
+    $(".empty-history").hide()
+    $(".search-history").show()
+
     $(".search-history-list").html(list)
   }
+
 }
