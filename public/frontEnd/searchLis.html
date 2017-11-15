@@ -54,11 +54,12 @@
       </a>
     </footer>
 
+    <!-- z主体部分 -->
     <main class="mui-content">
       <div class="mui-scroll-wrapper">
         <div class="mui-scroll">
           <!-- 主体展示区 可滚动 -->
-          <form>
+          <form class="search-listfrom">
             <div class="search-box">
               <span>搜索</span>
               <input type="text" placeholder="搜索你喜欢的商品">
@@ -67,53 +68,20 @@
           <div class="search-result">
 
             <div class="search-result-order">
-              <a href="">上架时间
+              <a href="javascript:;">上架时间
                 <i class="fa fa-angle-down"></i>
               </a>
-              <a href="">价格
+              <a href="javascript:;" class="order-price">价格
                 <i class="fa fa-angle-down"></i>
               </a>
-              <a href="">销量
+              <a href="javascript:;" class="order-stock">销量
                 <i class="fa fa-angle-down"></i>
               </a>
-              <a href="">折扣
+              <a href="javascript:;">折扣
                 <i class="fa fa-angle-down"></i>
               </a>
             </div>
             <div class="search-result-list mui-clearfix">
-              <div class="item-wrap">
-                <a class="item" href="./detail.html">
-                  <img src="./images/product.jpg" alt="">
-                  <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700 </p>
-                  <div class="price">
-                    <span class="new">￥560.00</span>
-                    <span class="old">￥888.00</span>
-                  </div>
-                  <button>立即购买</button>
-                </a>
-              </div>
-              <div class="item-wrap">
-                <a class="item" href="./detail.html">
-                  <img src="./images/product.jpg" alt="">
-                  <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700 </p>
-                  <div class="price">
-                    <span class="new">￥560.00</span>
-                    <span class="old">￥888.00</span>
-                  </div>
-                  <button>立即购买</button>
-                </a>
-              </div>
-              <div class="item-wrap">
-                <a class="item" href="./detail.html">
-                  <img src="./images/product.jpg" alt="">
-                  <p>adidas阿迪达斯 男式 场下休闲篮球鞋S83700 </p>
-                  <div class="price">
-                    <span class="new">￥560.00</span>
-                    <span class="old">￥888.00</span>
-                  </div>
-                  <button>立即购买</button>
-                </a>
-              </div>
               <div class="item-wrap">
                 <a class="item" href="./detail.html">
                   <img src="./images/product.jpg" alt="">
@@ -130,18 +98,21 @@
         </div>
       </div>
     </main>
-
-    <script type="text/template" id="search-template">
-      <%for(var i=0;i<res.length;i++){%>
-        <li>
-          <span class="mui-pull-left" data-id="<%=i%>">
-            <%=res[i]%>
-          </span>
-          <i class="fa fa-times mui-pull-right"></i>
-        </li>
+  </div>
+    <script type="text/template" id="searchList-template">
+      <%for(var i=0;i<data.length;i++){%>
+              <div class="item-wrap">
+                <a class="item">
+                  <img src="<%=data[i].pic[0].picName%>" alt="">
+                  <p><%=data[i].proName%></p>
+                  <div class="price">
+                    <span class="new">￥<%=data[i].price%></span>
+                    <span class="old">￥<%=data[i].oldPrice%></span>
+                  </div>
+                  <button>立即购买</button>
+                </a>
+              </div>
         <%}%>
-
-
     </script>
 
     <script src="./lib/mui/js/mui.min.js"></script>
@@ -150,7 +121,7 @@
     <script src="./lib/artTemplate/template-native.js"></script>
     <!-- 引入js -->
     <script src="./js/common.js"></script>
-    <!-- <script src="./js/search.js"></script> -->
+    <script src="./js/searchLis.js"></script>
 
 </body>
 

@@ -13,7 +13,7 @@ $(function(){
     var hisList = getLs()
     console.log(keyWord)
     var baseUrl = $(this).find("a").prop("href")   
-    var finalUrl = baseUrl + "?keyWord=" + keyWord 
+    var finalUrl = baseUrl + "?proName=" + keyWord 
     $(this).find("a").prop("href", finalUrl)
   })
   // 3-点击清空历史按钮 将历史记录删除
@@ -30,16 +30,11 @@ $(function(){
     removeH(deleteData);
     showHistory();
   })
-
-  // $(window).ajaxStart(function () {
-  //   console.log(1)
-  // });
-  // $(window).ajaxComplete(function () {
-  //   console.log(2)
-  // });
-
-
-
+  // 点击历史搜索记录的字 完成跳转
+  $("search-history-list").on("tap","span",function () { 
+    var keyWord = valueInput.val()
+    location.href = "./searchlis.html?proName="+keyWord
+   })
 })
   
 
